@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "ce3be03c-8925-44cb-8102-7ff20190aed0",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register A User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mggonu\",\"email\":\"ndggd@gmail.com\",\"mobile\":9264954234,\"password\":\"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login A User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"nd@gmail.com\",\"password\":\"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Follow A User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTJjNmYwZWU0Y2IzMmZkN2EzNTZkMiIsImlhdCI6MTY3ODk1MjQyNSwiZXhwIjoxNjc5MjExNjI1fQ.kZr_H-v3CYZHlPPlrjFtVZj1ttiHwZKZ7FXWn8WY9kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"followId\":\"6412cd285638ecac0760bd62\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/user/follow/6412cd285638ecac0760bd62",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"follow",
+						"6412cd285638ecac0760bd62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnFollow A User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTJjNmYwZWU0Y2IzMmZkN2EzNTZkMiIsImlhdCI6MTY3ODk1MjQyNSwiZXhwIjoxNjc5MjExNjI1fQ.kZr_H-v3CYZHlPPlrjFtVZj1ttiHwZKZ7FXWn8WY9kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"unFollowId\":\"6412cd285638ecac0760bd62\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/post/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create A Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTJjNmYwZWU0Y2IzMmZkN2EzNTZkMiIsImlhdCI6MTY3ODk1MjQyNSwiZXhwIjoxNjc5MjExNjI1fQ.kZr_H-v3CYZHlPPlrjFtVZj1ttiHwZKZ7FXWn8WY9kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"My Post\",\r\n    \"description\":\"gfd gfd gdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/post",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A POST",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Like A Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTJjNmYwZWU0Y2IzMmZkN2EzNTZkMiIsImlhdCI6MTY3ODk1MjQyNSwiZXhwIjoxNjc5MjExNjI1fQ.kZr_H-v3CYZHlPPlrjFtVZj1ttiHwZKZ7FXWn8WY9kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/post/like/6412d256760c686dffe4da9b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"like",
+						"6412d256760c686dffe4da9b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisLike A Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTJjNmYwZWU0Y2IzMmZkN2EzNTZkMiIsImlhdCI6MTY3ODk1MjQyNSwiZXhwIjoxNjc5MjExNjI1fQ.kZr_H-v3CYZHlPPlrjFtVZj1ttiHwZKZ7FXWn8WY9kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/post/dislike/6412d256760c686dffe4da9b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"dislike",
+						"6412d256760c686dffe4da9b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Posts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Post",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Comments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MTJjNmYwZWU0Y2IzMmZkN2EzNTZkMiIsImlhdCI6MTY3ODk1MjQyNSwiZXhwIjoxNjc5MjExNjI1fQ.kZr_H-v3CYZHlPPlrjFtVZj1ttiHwZKZ7FXWn8WY9kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\":\"\",\r\n    \"description\":\"Hello All\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/comments/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"comments",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
